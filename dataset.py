@@ -31,7 +31,7 @@ def load(blob):
         if timestamp not in events:
             events[timestamp] = {}
 
-        events[timestamp]['{}.{}'.format(sensor, param)] = value
+        events[timestamp]['.'.join([sensor, param])] = value
 
     rows = list(pd.DataFrame(events).items())
 
@@ -39,6 +39,12 @@ def load(blob):
 
 
 def load_from_url(url):
+    """Load a single dataset from a URL."""
     r = requests.get(url)
     assert r.status_code == 200
     return load(r.content)
+
+
+def load_from_urls(urls):
+    """Loads and concatenates multiple datasets from a list of URLs."""
+    return pd.concat([load_from_url(url) for url in urls])
