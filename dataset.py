@@ -38,8 +38,14 @@ def load(blob):
     return pd.DataFrame([r[1] for r in rows], index=[r[0] for r in rows])
 
 
+def load_from_file(filename):
+    """Load a dataset from a file."""
+    with open(filename, 'rb') as f:
+        return load(f.read())
+
+
 def load_from_url(url):
-    """Load a single dataset from a URL."""
+    """Load a dataset from a URL."""
     r = requests.get(url)
     assert r.status_code == 200
     return load(r.content)
