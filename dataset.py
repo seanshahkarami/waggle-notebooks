@@ -22,7 +22,7 @@ def load(blob):
     for line in lines:
         fields = line.split(';')
 
-        timestamp = datetime.datetime.fromtimestamp(float(fields[1]) // 1000)
+        timestamp = datetime.datetime.strptime(fields[1], '%Y/%m/%d %H:%M:%S')
         # plugin = fields[3]
         sensor = fields[4]
         param = fields[5]
