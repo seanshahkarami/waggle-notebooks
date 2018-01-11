@@ -21,4 +21,12 @@ def load_dataset(url):
 
 
 def load_datasets(urls):
-    return pd.concat([load_dataset(url) for url in urls])
+    dfs = []
+    
+    for url in urls:
+        try:
+            dfs.append(load_dataset(url))
+        except:
+            continue
+    
+    return pd.concat(dfs)
