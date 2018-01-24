@@ -1,6 +1,6 @@
 # Jupyter Notebook Examples using Waggle Datasets
 
-These are various notebooks and code I've found useful when exploring the data we've collected. Please feel free to use what's here.
+These are various notebooks and code I've found useful when exploring some of the Waggle datasets. Hopefully some of this is useful to you, too!
 
 ## Setup
 
