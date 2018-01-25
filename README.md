@@ -1,5 +1,14 @@
 # Jupyter Notebook Examples using Waggle Datasets
 
-This will house various notebooks and code I've found interesting or useful when exploring some of the data we've collected. Please feel free to use what's here - if it's helpful to you, then I consider it worthwhile.
+These are various notebooks and code I've found useful when exploring some of the Waggle datasets. Hopefully some of this is useful to you, too!
 
-That being said, I need to provide a fair warning: Even though I work on the Waggle team, these should be considered my own, _personal_ explorations and experiments and not a stable interface / API to any of what's available publically or anything like that. Please keep that in mind if you do decide to use any of it.
+## Setup
+
+I just use Pandas for the data loading and processing, you can install it using:
+```
+# python 2
+pip install pandas
+
+# python 3
+pip3 install pandas
+```
