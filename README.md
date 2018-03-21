@@ -7,8 +7,10 @@ These are various notebooks and code I've found useful when exploring some of th
 All dependencies are listed in a standard requirements file. To install, just
 run:
 ```
-# or pip3, if you have python 2 and 3 installed
 pip install -r requirements.txt
+
+# you may need to explicitly use pip3, if you have python 2 and 3 installed.
+pip3 install -r requirements.txt
 ```
 
 Now you should be able to open the notebook viewer in this directory:
